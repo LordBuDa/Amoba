@@ -47,31 +47,56 @@ void CheckO(int i, int j, vector<vector<Negyzet> > Palya)
 }
 void FinalCheck(vector<vector<Negyzet> > Palya)
 {
-    for(int i=4;i<Palya.size()-4;i++)
+    int n=Palya.size();
+    int m=Palya[0].size();
+    //fuggoleges
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
         {
-            for(int j=4;j<Palya[i].size()-4;j++)
-            {
-                if(Palya[i][j].state!=-1)
-                {
-                    if(Palya[i+1][j].state==Palya[i][j].state && Palya[i+2][j].state==Palya[i][j].state && Palya[i+3][j].state==Palya[i][j].state && Palya[i+4][j].state==Palya[i][j].state && win==false)
-                    {win=true;play=false;}
-                    if(Palya[i+1][j+1].state==Palya[i][j].state && Palya[i+2][j+2].state==Palya[i][j].state && Palya[i+3][j+3].state==Palya[i][j].state && Palya[i+4][j+4].state==Palya[i][j].state && win==false)
-                    {win=true;play=false;}
-                    if(Palya[i][j+1].state==Palya[i][j].state && Palya[i][j+2].state==Palya[i][j].state && Palya[i][j+3].state==Palya[i][j].state && Palya[i][j+4].state==Palya[i][j].state && win==false)
-                    {win=true;play=false;}
-                    if(Palya[i-1][j+1].state==Palya[i][j].state && Palya[i-2][j+2].state==Palya[i][j].state && Palya[i-3][j+3].state==Palya[i][j].state && Palya[i-4][j+4].state==Palya[i][j].state && win==false)
-                    {win=true;play=false;}
-                    if(Palya[i-1][j].state==Palya[i][j].state && Palya[i-2][j].state==Palya[i][j].state && Palya[i-3][j].state==Palya[i][j].state && Palya[i-4][j].state==Palya[i][j].state && win==false)
-                    {win=true;play=false;}
-                    if(Palya[i-1][j-1].state==Palya[i][j].state && Palya[i-2][j-2].state==Palya[i][j].state && Palya[i-3][j-3].state==Palya[i][j].state && Palya[i-4][j-4].state==Palya[i][j].state && win==false)
-                    {win=true;play=false;}
-                    if(Palya[i][j-1].state==Palya[i][j].state && Palya[i][j-2].state==Palya[i][j].state && Palya[i][j-3].state==Palya[i][j].state && Palya[i][j-4].state==Palya[i][j].state && win==false)
-                    {win=true;play=false;}
-                    if(Palya[i+1][j-1].state==Palya[i][j].state && Palya[i+2][j-2].state==Palya[i][j].state && Palya[i+3][j-3].state==Palya[i][j].state && Palya[i+4][j-4].state==Palya[i][j].state && win==false)
-                    {win=true;play=false;}
-                }
-            }
-	}
+            CheckX(i,j,Palya);
+            CheckO(i,j,Palya);
+        }
+        sorbanX.clear();
+        sorbanO.clear();
+    }
+    //vizszintes
+    for(int j=0;j<m;j++)
+    {
+        for(int i=0;i<n;i++)
+        {
+            CheckX(i,j,Palya);
+            CheckO(i,j,Palya);
+        }
+        sorbanX.clear();
+        sorbanO.clear();
+    }
+    //keresztbe balra le (x=i+j allando)
+    for(int x=0;x<(n+m-1);x++)
+    {
+        int i=(x<m ? 0 : x-m+1);
+        while(i<n && x-i>=0)
+        {
+            CheckX(i,x-i,Palya);
+            CheckO(i,x-i,Palya);
+            i++;
+        }
+        sorbanX.clear();
+        sorbanO.clear();
+    }
+    //keresztbe jobbra le (x=i-j allando)
+    for(int x=n-1;x>-m;x--)
+    {
+        int i=(x>0 ? x : 0);
+        while(i<n && i-x<m)
+        {
+            CheckX(i,i-x,Palya);
+            CheckO(i,i-x,Palya);
+            i++;
+        }
+        sorbanX.clear();
+        sorbanO.clear();
+    }
     //betelt-e
     int t=0;
     for(int i=0;i<Palya.size();i++)

@@ -1,0 +1,25 @@
+for(int i=4;i<Palya.size()-4;i++)
+        {
+            for(int j=4;j<Palya[i].size()-4;j++)
+            {
+                if(Palya[i][j].state!=-1)
+                {
+                    if(Palya[i+1][j].state==Palya[i][j].state && Palya[i+2][j].state==Palya[i][j].state && Palya[i+3][j].state==Palya[i][j].state && Palya[i+4][j].state==Palya[i][j].state && win==false)
+                    {win=true;play=false;}
+                    if(Palya[i+1][j+1].state==Palya[i][j].state && Palya[i+2][j+2].state==Palya[i][j].state && Palya[i+3][j+3].state==Palya[i][j].state && Palya[i+4][j+4].state==Palya[i][j].state && win==false)
+                    {win=true;play=false;}
+                    if(Palya[i][j+1].state==Palya[i][j].state && Palya[i][j+2].state==Palya[i][j].state && Palya[i][j+3].state==Palya[i][j].state && Palya[i][j+4].state==Palya[i][j].state && win==false)
+                    {win=true;play=false;}
+                    if(Palya[i-1][j+1].state==Palya[i][j].state && Palya[i-2][j+2].state==Palya[i][j].state && Palya[i-3][j+3].state==Palya[i][j].state && Palya[i-4][j+4].state==Palya[i][j].state && win==false)
+                    {win=true;play=false;}
+                    if(Palya[i-1][j].state==Palya[i][j].state && Palya[i-2][j].state==Palya[i][j].state && Palya[i-3][j].state==Palya[i][j].state && Palya[i-4][j].state==Palya[i][j].state && win==false)
+                    {win=true;play=false;}
+                    if(Palya[i-1][j-1].state==Palya[i][j].state && Palya[i-2][j-2].state==Palya[i][j].state && Palya[i-3][j-3].state==Palya[i][j].state && Palya[i-4][j-4].state==Palya[i][j].state && win==false)
+                    {win=true;play=false;}
+                    if(Palya[i][j-1].state==Palya[i][j].state && Palya[i][j-2].state==Palya[i][j].state && Palya[i][j-3].state==Palya[i][j].state && Palya[i][j-4].state==Palya[i][j].state && win==false)
+                    {win=true;play=false;}
+                    if(Palya[i+1][j-1].state==Palya[i][j].state && Palya[i+2][j-2].state==Palya[i][j].state && Palya[i+3][j-3].state==Palya[i][j].state && Palya[i+4][j-4].state==Palya[i][j].state && win==false)
+                    {win=true;play=false;}
+                }
+            }
+	}
