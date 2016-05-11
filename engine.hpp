@@ -12,5 +12,6 @@ void FinalCheck(std::vector<std::vector<Negyzet> > Palya);
 void Play(genv::event ev);
 void Kezdo(genv::event ev);
 void Meghalas(genv::event ev);
+void EventLoop();
 
 #endif // ENGINE_H_INCLUDED

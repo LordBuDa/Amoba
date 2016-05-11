@@ -194,3 +194,21 @@ void Meghalas(event ev)
 
     gout<<refresh;
 }
+
+void EventLoop()
+{
+    event ev;
+    while(gin >> ev)
+    {
+        if(ev.keycode==key_escape){return;}
+        if(win==false)
+        {
+            if(play==false){Kezdo(ev);}
+            if(play==true){Play(ev);}
+        }
+        if(win==true)
+        {
+            Meghalas(ev);
+        }
+    }
+}
