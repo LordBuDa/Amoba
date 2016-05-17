@@ -14,7 +14,7 @@
 1330553510 c:\users\david\desktop\1etem\2015-16_2\bevprog2\gyak1\graphicsproject\include\graphics.hpp
 	<string>
 
-1462267457 source:c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\main.cpp
+1463339791 source:c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\main.cpp
 	<graphics.hpp>
 	<iostream>
 	"widget.hpp"
@@ -24,7 +24,7 @@
 1330557110 c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\include\graphics.hpp
 	<string>
 
-1462110355 source:c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\widget.cpp
+1463481107 source:c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\widget.cpp
 	<graphics.hpp>
 	"widget.hpp"
 	"engine.hpp"
@@ -32,17 +32,17 @@
 	<sstream>
 	<cmath>
 
-1462102726 c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\widget.hpp
+1463481046 c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\widget.hpp
 	<vector>
 
-1462994396 source:c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\engine.cpp
+1463480909 source:c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\engine.cpp
 	<iostream>
 	<graphics.hpp>
 	"engine.hpp"
 	"widget.hpp"
 	<vector>
 
-1462994385 c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\engine.hpp
+1463480909 c:\users\david\desktop\1etem\2015-16_2\bevprog2\amoba\engine.hpp
 	<vector>
 	"widget.hpp"
 

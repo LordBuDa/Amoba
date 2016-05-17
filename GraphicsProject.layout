@@ -1,29 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+	<File name="engine.hpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="381" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="engine.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="885" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="18" />
+			<Collapse line="30" />
+			<Collapse line="40" />
+			<Collapse line="50" />
+			<Collapse line="118" />
+			<Collapse line="135" />
+			<Collapse line="166" />
+			<Collapse line="200" />
+		</Folding>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="224" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="widget.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2668" topLine="9" />
+			<Cursor1 position="148" topLine="0" />
 		</Cursor>
+		<Folding>
+			<Collapse line="14" />
+			<Collapse line="30" />
+			<Collapse line="36" />
+			<Collapse line="49" />
+			<Collapse line="72" />
+		</Folding>
 	</File>
 	<File name="widget.hpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="494" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="288" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="engine.cpp" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2311" topLine="41" />
-		</Cursor>
-	</File>
-	<File name="engine.hpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="199" topLine="0" />
+			<Cursor1 position="395" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

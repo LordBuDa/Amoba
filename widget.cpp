@@ -26,6 +26,7 @@ void GenerateMap(int a, int b)
         Palya.push_back(w);
     }
 }
+
 void AddNumeric(int a,int b,int c,int d,int e,int f)
 {
     Szamos w(a,b,c,d,e,f);
@@ -44,6 +45,7 @@ Szamos::Szamos(int a,int b,int c,int d,int e,int f)
         minimum=e;
         maximum=f;
     }
+
 Negyzet::Negyzet(int a,int b)
     {
         x=a;
@@ -66,6 +68,7 @@ void Szamos::kirajzol()
     zsemle>>s;
     gout<<move_to(x+10,y+mag/1.5)<<text(s);
 }
+
 void Szamos::check(event ev)
 {
     if(ev.pos_x>(szel+x-mag/2) && ev.pos_x<(szel+x) && ev.pos_y>y && ev.pos_y<y+mag/2)
@@ -84,6 +87,7 @@ void Szamos::check(event ev)
     if(aktualis<minimum){aktualis=minimum;}
     if(aktualis>maximum){aktualis=maximum;}
 }
+
 void Negyzet::kirajzol()
 {
     gout<<move_to(x,y)<<color(150,150,150)<<box(szel,szel)<<move_to(x+(szegely/2),y+(szegely/2))<<color(0,0,0)<<box(szel-szegely,szel-szegely);

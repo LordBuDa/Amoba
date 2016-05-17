@@ -20,12 +20,11 @@ public:
 class Negyzet
 {
 public:
-    int x,y,szel;
-    int state;
+    int x,y,szel,state;
     Negyzet(int a,int b);
     void kirajzol();
 };
 
 extern std::vector<std::vector<Negyzet*> > Palya;
-extern std::vector<Szamos> Widgets;
+extern std::vector<Szamos> Widgets; //Palyameret allito widgetek
 #endif // WIDGET_HPP_INCLUDED

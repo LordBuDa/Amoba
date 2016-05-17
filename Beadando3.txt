@@ -1,0 +1,7 @@
+GitHub link:
+https://github.com/LordBuDa/Amoba
+
+Tudom, hogy a megjelenítés és a játéklogika nem különül el teljesen, de számomra ez így sokkal logikusabbnak tûnt, mint pl a "Meghalas" vagy "Kezdo" függvényekbõl vissza hivatkozni egy másik cpp-ben lévõ függvényre, amikor ott helyben is meg tudja csinálni, és összekapcsolódnak(a másik fájlhoz meg semmi köze, az az objektumokat tárolja a saját tagfüggvényeikkel).
+
+
+A githubon már nem sok munka látható, mert mire megtudtam, hogy oda kell feltölteni, nagyjából kész voltam vele...

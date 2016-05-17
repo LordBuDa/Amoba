@@ -17,7 +17,7 @@ vector<Negyzet> sorbanX, sorbanO;
 
 void Check(Negyzet &n, event ev)
 {
-    if(ev.pos_x<(n.x+cellaszel-(szegely/2)) && ev.pos_x>(n.x+(szegely/2)) && ev.pos_y>(n.y+(szegely/2)) &&ev.pos_y<(n.y+cellaszel-(szegely/2)) &&ev.button==btn_left )
+    if(ev.pos_x<(n.x+cellaszel-(szegely/4)) && ev.pos_x>(n.x+(szegely/4)) && ev.pos_y>(n.y+(szegely/4)) &&ev.pos_y<(n.y+cellaszel-(szegely/4)) &&ev.button==btn_left )
     {
         if(n.state==-1)
         {
@@ -36,6 +36,7 @@ void CheckX(int i, int j, vector<vector<Negyzet> > Palya)
     }
     else{sorbanX.clear();}
 }
+
 void CheckO(int i, int j, vector<vector<Negyzet> > Palya)
 {
     if(Palya[i][j].state==1)
@@ -45,6 +46,7 @@ void CheckO(int i, int j, vector<vector<Negyzet> > Palya)
     }
     else{sorbanO.clear();}
 }
+
 void FinalCheck(vector<vector<Negyzet> > Palya)
 {
     int n=Palya.size();
@@ -97,7 +99,7 @@ void FinalCheck(vector<vector<Negyzet> > Palya)
         sorbanX.clear();
         sorbanO.clear();
     }
-    //betelt-e
+    //betelt-e:
     int t=0;
     for(int i=0;i<Palya.size();i++)
         {
@@ -116,18 +118,18 @@ void FinalCheck(vector<vector<Negyzet> > Palya)
 void Play(event ev)
 {
     vector<vector<Negyzet> > deref;
-        for(int i=0;i<Palya.size();i++)
+    for(int i=0;i<Palya.size();i++)
+    {
+        vector<Negyzet> v;
+        for(int j=0;j<Palya[i].size();j++)
         {
-            vector<Negyzet> v;
-            for(int j=0;j<Palya[i].size();j++)
-            {
-                Check(*Palya[i][j],ev);
-                Palya[i][j]->kirajzol();
-                v.push_back(*Palya[i][j]);
-            }
-            deref.push_back(v);
+            Check(*Palya[i][j],ev);
+            Palya[i][j]->kirajzol();
+            v.push_back(*Palya[i][j]);
         }
-        FinalCheck(deref);
+        deref.push_back(v);
+    }
+    FinalCheck(deref);
 }
 
 void Kezdo(event ev)
@@ -139,7 +141,7 @@ void Kezdo(event ev)
     gout.load_font("airstrikelaser.ttf",20);
     gout<<move_to(15,120)<<text("A palya merete:");
     gout<<move_to(285,125)<<text("X");
-    gout.load_font("LiberationSans-Regular");
+    gout.load_font("LibrationSans-Regular.ttf");
     for(int i=0;i<Widgets.size();i++)
     {
         Widgets[i].check(ev);
@@ -189,8 +191,8 @@ void Meghalas(event ev)
     gout<<move_to(10,330)<<text("Fomenuhoz nyomj Space-t!");
     gout<<move_to(130,380)<<text("Kilepes: Esc");
 
-    if(ev.keycode==key_enter){win=false;play=true;GenerateMap(a,b);}
-    if(ev.keycode==key_space){win=false;play=false;}
+    if(ev.keycode==key_enter){win=false;play=true;GenerateMap(a,b);Play(ev);}
+    if(ev.keycode==key_space){win=false;play=false;Kezdo(ev);}
 
     gout<<refresh;
 }
